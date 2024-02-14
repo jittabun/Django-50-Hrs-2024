@@ -1,0 +1,11 @@
+{% extends 'myapp/base.html' %}
+
+{% block title %} Pom Website - Tracking {% endblock title %}
+
+{% block content %}
+
+{% for t in tracks %}
+    <h1>{{t}}</h1><br>
+{% endfor %}
+
+{% endblock content %}

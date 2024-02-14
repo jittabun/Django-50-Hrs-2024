@@ -11,6 +11,11 @@ def Aboutus(request):
 def Contact(request):
     return render(request,'myapp/contact.html')
 
+def Tracking(request):
+    tracks = ['Pom - TA312321','Sarah - TA312322','James - TA312323','Olate - TA312324']
+    context = {'tracks':tracks}
+    return render(request,'myapp/tracking.html',context)
+
 def Sawatdee(requests):
     return HttpResponse("<h1>สวัสดีจ้าา</h1>")
 
