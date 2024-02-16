@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Tracking
 
 # Create your views here.
 def Home(request):
@@ -11,8 +12,8 @@ def Aboutus(request):
 def Contact(request):
     return render(request,'myapp/contact.html')
 
-def Tracking(request):
-    tracks = ['Pom - TA312321','Sarah - TA312322','James - TA312323','Olate - TA312324']
+def TrackingPage(request):
+    tracks = Tracking.objects.all()
     context = {'tracks':tracks}
     return render(request,'myapp/tracking.html',context)
 
